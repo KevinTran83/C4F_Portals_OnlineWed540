@@ -14,11 +14,12 @@ public class Portal : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
         if (other.transform.tag == "Teleportable")
         {
             other.transform.position = partner.transform.position + other.transform.forward * 2;
-            other.transform.rotation = partner.transform.rotation;
+            other.transform.forward  = new Vector3(partner.transform.forward.x,
+                                                   0,
+                                                   partner.transform.forward.z).normalized;
         }
     }
 }

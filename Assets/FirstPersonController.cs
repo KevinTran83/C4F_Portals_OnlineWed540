@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
 {
-    public float moveSpeed = 10, lookSpeed = 150;
+    public float moveSpeed = 10, lookSpeed = 150, jumpSpeed = 25;
     public Transform head;
 
     private Rigidbody rb;
@@ -21,6 +21,9 @@ public class FirstPersonController : MonoBehaviour
     void Update()
     {
         Look();
+        if ( Input.GetAxis("Jump") != 0
+          && Physics.Raycast(transform.position-transform.up, -transform.up, 1)
+           ) Jump();
         Move();
     }
 
@@ -33,6 +36,11 @@ public class FirstPersonController : MonoBehaviour
                          0,
                          0);
     }
+
+    private void Jump() { Vector3 temp = rb.velocity;
+                          temp.y       = jumpSpeed;
+                          rb.velocity  = temp;
+                        }
 
     private void Move()
     {

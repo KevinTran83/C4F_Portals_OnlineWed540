@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 1066672065}
   - component: {fileID: 1066672064}
   - component: {fileID: 1066672063}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 1499519033}
   - component: {fileID: 1499519032}
   - component: {fileID: 1499519031}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,6 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   lookSpeed: 720
+  jumpSpeed: 5
   head: {fileID: 963194228}
 --- !u!114 &1572344858
 MonoBehaviour:
@@ -671,6 +672,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portalA: {fileID: 2116238238}
   portalB: {fileID: 594413211}
+  portalSurface:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!136 &1572344859
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -691,7 +695,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-27124
+  m_Name: pb_Mesh23812
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -989,7 +993,7 @@ GameObject:
   - component: {fileID: 1881124611}
   - component: {fileID: 1881124610}
   - component: {fileID: 1881124609}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2474,17 +2478,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 1707216425}
   m_VersionIndex: 674
   m_IsSelectable: 1
-  m_SelectedFaces: 22000000
-  m_SelectedEdges:
-  - a: 136
-    b: 137
-  - a: 137
-    b: 138
-  - a: 139
-    b: 136
-  - a: 138
-    b: 139
-  m_SelectedVertices: 88000000890000008a0000008b000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &1881124613
 Transform:
   m_ObjectHideFlags: 0
